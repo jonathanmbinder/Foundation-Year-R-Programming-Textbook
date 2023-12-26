@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Foundation Year R Programming",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books."
+    "text": "Preface\nThis book is a companion to the Royal Holloway, University of London Foundation Year Statistics Course for Biological Sciences."
   },
   {
     "objectID": "intro.html",
@@ -61,5 +61,278 @@
     "title": "1  Introduction to R programming and RStudio",
     "section": "1.5 Writing your first R script",
     "text": "1.5 Writing your first R script\nWhile you can write and execute code directly in the console, when you are doing analyses I strongly encourage you to"
+  },
+  {
+    "objectID": "wk1-intro.html#r",
+    "href": "wk1-intro.html#r",
+    "title": "What is R?",
+    "section": "R",
+    "text": "R\n\n\n\nR is a programming language"
+  },
+  {
+    "objectID": "wk1-intro.html#rstudio",
+    "href": "wk1-intro.html#rstudio",
+    "title": "What is R?",
+    "section": "RStudio",
+    "text": "RStudio\n\n\n\nRStudio improves the functionality of R"
+  },
+  {
+    "objectID": "wk1-intro.html#installing-r-and-rstudio",
+    "href": "wk1-intro.html#installing-r-and-rstudio",
+    "title": "Week 1 - Introduction to R programming and RStudio",
+    "section": "Installing R and RStudio",
+    "text": "Installing R and RStudio\nThe first step is to download and install R. Navigate to the Comprehensive R Archive Network (CRAN) and select the correct download link for your system (Windows, Mac, or…Linux?).\nYou will need to download and install RStudio. Navigate to the Posit website to install the desktop version of RStudio."
+  },
+  {
+    "objectID": "wk1-intro.html#tour-of-rstudio",
+    "href": "wk1-intro.html#tour-of-rstudio",
+    "title": "Week 1 - Introduction to R programming and RStudio",
+    "section": "Tour of RStudio",
+    "text": "Tour of RStudio\nThe RStudio window is divided into a number of panes.\n\nConsole, Terminal, Background Jobs\nBy default, the bottom left pane will contain tabs Console, Terminal, and Background Jobs.\nYou will mostly be using the console tab. This is where your code will be executed and where you will see results from statistical tests. You can also type code here to be executed.\n\n\n\n\n\n\nNavigating history of the console\n\n\n\nYou can press arrow keys ↑ and ↓ to go backward and forward through the history of code that was executed. This is useful for quickly going back to fix an error in code.\n\n\n\n\nEnvironment, History, Connections, Build, Tutorial\nBy default, the top-right pane has tabs Environment, History, Connections, Build, and Tutorial. You will mostly use the environment tab. This is where data you import or variables you define will appear.\n\n\n\n\n\n\nViewing things in the environment\n\n\n\nYou can click on items that are in the environment to view them in an Excel-like viewer. This is useful for scrolling through data and looking at data in an easy-to-view manner.\n\n\n\n\nFiles, Plots, Packages, Help, Viewer, Presentation\nBy default, the bottom right pane will have tabs for Files, Plots, Packages, Help, Viewer, and Presentation. You will spend most of your time in the Plots pane as this is where plots will appear when you generate plots.\n\n\nSource\nBy default, the top left pane that will appear when you create a new R script is called the “Source” pane. This is where you will write script that can be executed in the console."
+  },
+  {
+    "objectID": "wk1-intro.html#writing-your-first-r-script",
+    "href": "wk1-intro.html#writing-your-first-r-script",
+    "title": "Week 1 - Introduction to R programming and RStudio",
+    "section": "Writing your first R script",
+    "text": "Writing your first R script\nWhile you can write and execute code directly in the console, when you are doing analyses I strongly encourage you to 👏 write 👏 a 👏 script! 👏\nA script is just a text file with a .R extension (the file name ends in “.R”) which tells your computer to run the commands using the R programming language installed on your computer. Writing a script allows you to keep your analysis and thoughts organised. It also allows you to reproduce your analysis easily. You can take the scripts you create and\nTo create a new script, navigate to File &gt; New File &gt; R Script\nYou can also use the keyboard shortcut Ctrl + ⇧ Shift + N on Windows or ⌘ + ⇧ Shift + N on Mac.\n\nstr(1)\n\n num 1"
+  },
+  {
+    "objectID": "wk2-averages-sd-se.html#mean",
+    "href": "wk2-averages-sd-se.html#mean",
+    "title": "Week 2 - Averages, standard deviation, and standard error",
+    "section": "Mean",
+    "text": "Mean\nAs you know, the mean (or average) is the sum of a group of numbers divided by the number of individual numbers.\nThere are a few base R functions that we can use to calculate the mean.\nTo calculate a mean, first we add up all the values that we are interested in using the sum() function.\nHere, we will use the rivers dataset which is included in your installation of R. rivers is a predefined dataset and you can find out more about it by typing ?rivers in the console. rivers is a vector which is a list of items that all have the same type (i.e. list of numbers, list of strings, etc.)\nFirst, we add up all the elements of the vector rivers by using the function sum()\n\nsum(rivers)\n\nWe can assign this value to a variable by using"
+  },
+  {
+    "objectID": "wk1-intro.html#writing-and-executing-code",
+    "href": "wk1-intro.html#writing-and-executing-code",
+    "title": "Week 1 - Introduction to R programming and RStudio",
+    "section": "Writing and executing code",
+    "text": "Writing and executing code\nIn the console, you can write and execute code. You can do simple mathematical operations. Try to do a couple now. Another important thing to do is assigning variables. By convention, in R variables are mostly assigned using the leftward operator and it is constructed by typing a less-than sign followed by a hyphen (&lt;-).\n\nx &lt;- 5\nx*2\n\n[1] 10\n\nx-11\n\n[1] -6"
+  },
+  {
+    "objectID": "wk1-intro.html",
+    "href": "wk1-intro.html",
+    "title": "What is R?",
+    "section": "",
+    "text": "Base R and packages"
+  },
+  {
+    "objectID": "wk1-intro.html#r-programming",
+    "href": "wk1-intro.html#r-programming",
+    "title": "What is R?",
+    "section": "R programming",
+    "text": "R programming\n\n\n“language and environment for statistical computing and graphics” - https://www.r-project.org/about.html\n\n\n\n\nfree and open source\n\n\n\n\nimport data, data exploration, statistical analysis, graphical representation, report creation\n\n\n\n\n\nLearning R has its ups and downs\n\n\n\n\n\nSuccess in R is enabled by support from lots of people\n\n\n\n\n\nSome people really really like R"
+  },
+  {
+    "objectID": "wk1-intro.html#r-studio",
+    "href": "wk1-intro.html#r-studio",
+    "title": "What is R?",
+    "section": "R Studio",
+    "text": "R Studio\n\nWriting code\n\nMaths\nYou can do simple math in the console.\n\n\n1 + 1\n\n[1] 2\n\n\n\n\nYou can use pi as well as other more complex arithmetic.\n\n\n4*pi\n\n[1] 12.56637\n\n\n\n\n\n10^2\n\n[1] 100\n\n\n\n\n\nAssigning variables\nBy convention, variables are assigned using &lt;-\n\nx &lt;- 5\n\n\n\nx\n\n[1] 5\n\n\n\n\n\nx*2\n\n[1] 10\n\n\n\n\n\n\n\n\n\nNavigating history of the console\n\n\n\nYou can press arrow keys ↑ and ↓ to go backward and forward through the history of code that was executed. This is useful for quickly going back to fix an error in code.\n\n\n\n\n\nWe use &lt;- instead of = by convention although both have the same function.\n\n\n\n\nTypes of variables\n\n\n\nsource: https://sydney-informatics-hub.github.io/lessonbmc/02-BMC_R_Day1_B/index.html\n\n\n\n\nCreating a script\nA script is a file containing text, written in the R programming language, which can be executed in R.\nFile -&gt; New File -&gt; R Script\n\n\nStay organised (logical flow)\n\n\n\n\nRepeat the same analysis with new data\n\n\n\n\nShare code with others\n\n\n\n\n\n\n\n\n\nExecuting your script\n\n\n\nClick on a line in your script and press Ctrl + ↵ Return to execute your script line-by-line."
+  },
+  {
+    "objectID": "wk1-intro.html#downloading-r-1",
+    "href": "wk1-intro.html#downloading-r-1",
+    "title": "What is R?",
+    "section": "Downloading R",
+    "text": "Downloading R\nNavigate to https://cran.r-project.org/"
+  },
+  {
+    "objectID": "wk1-intro.html#downloading-r-studio-1",
+    "href": "wk1-intro.html#downloading-r-studio-1",
+    "title": "What is R?",
+    "section": "Downloading R Studio",
+    "text": "Downloading R Studio\nNavigate to https://posit.co/download/rstudio-desktop/"
+  },
+  {
+    "objectID": "wk1-intro.html#r-studio-1",
+    "href": "wk1-intro.html#r-studio-1",
+    "title": "What is R?",
+    "section": "R Studio",
+    "text": "R Studio"
+  },
+  {
+    "objectID": "wk1-intro.html#writing-code",
+    "href": "wk1-intro.html#writing-code",
+    "title": "What is R?",
+    "section": "Writing code",
+    "text": "Writing code\n\nMaths\nYou can do simple math in the console.\n\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "wk1-intro.html#writing-code-1",
+    "href": "wk1-intro.html#writing-code-1",
+    "title": "What is R?",
+    "section": "Writing code",
+    "text": "Writing code\n\nCreating vectors\nA vector is simply a list of items that are all the same type.\nThe function c() combines values to a vector (list).\nFunctions follow the pattern function_name(argument/s).\n\nx &lt;- c(1,4,5.8) # I am assigning my favourite numbers to the variable \"x\"\n\n\n\nx*2             # Multiply each number by 2\n\n[1]  2.0  8.0 11.6\n\n\n\n\n\n\n\n\n\nCommenting on code\n\n\n\nEverything to the right of the hashtag (#) is considered a “comment” and is not interpreted as R code."
+  },
+  {
+    "objectID": "wk1-intro.html#writing-code-2",
+    "href": "wk1-intro.html#writing-code-2",
+    "title": "What is R?",
+    "section": "Writing code",
+    "text": "Writing code\n\nCreating vectors\n\nx &lt;- c(\"Windsor\", \"Davison\", \"Founder's\", \"Bourne\", \"The Hub\")\nx\n\n[1] \"Windsor\"   \"Davison\"   \"Founder's\" \"Bourne\"    \"The Hub\"  \n\n\n\n\nx*2\n\nError in x * 2: non-numeric argument to binary operator"
+  },
+  {
+    "objectID": "wk1-intro.html#writing-code-3",
+    "href": "wk1-intro.html#writing-code-3",
+    "title": "What is R?",
+    "section": "Writing code",
+    "text": "Writing code\n\nWhat’s my variable?\nWe can find out the structure of a variable or dataframe is is by using the function str()\n\nx &lt;- c(1,4,5.8) # I am assigning my favorite numbers to the variable \"x\"\nstr(x)\n\n num [1:3] 1 4 5.8\n\n\n\n\ny &lt;- \"fish\"\nstr(y)\n\n chr \"fish\""
+  },
+  {
+    "objectID": "wk1-intro.html#writing-code-4",
+    "href": "wk1-intro.html#writing-code-4",
+    "title": "What is R?",
+    "section": "Writing code",
+    "text": "Writing code\n\nWhat’s my variable?\nYou can see what variables you have assigned in the ‘Environment’ tab in R Studio."
+  },
+  {
+    "objectID": "wk1-intro.html#writing-code-5",
+    "href": "wk1-intro.html#writing-code-5",
+    "title": "What is R?",
+    "section": "Writing code",
+    "text": "Writing code\n\nWhat’s my variable?\nWe can find out the structure of a variable or dataframe is is by using the function str()\n\nx &lt;- c(1,4,5.8) # I am assigning my favorite numbers to the variable \"x\"\nstr(x)\n\n num [1:3] 1 4 5.8\n\n\n\n\ny &lt;- \"fish\"\nstr(y)\n\n chr \"fish\""
+  },
+  {
+    "objectID": "wk1-intro.html#section-7",
+    "href": "wk1-intro.html#section-7",
+    "title": "What is R?",
+    "section": "",
+    "text": "Read 👏 your 👏 error 👏 and 👏 Google 👏 it! 👏"
+  },
+  {
+    "objectID": "wk1-intro.html#writing-code-6",
+    "href": "wk1-intro.html#writing-code-6",
+    "title": "What is R?",
+    "section": "Writing code",
+    "text": "Writing code\n\nWhat’s my variable?\nYou can see what variables you have assigned in the ‘Environment’ tab in R Studio."
+  },
+  {
+    "objectID": "wk1-intro.html#r-1",
+    "href": "wk1-intro.html#r-1",
+    "title": "Week 1 - Introduction to R programming and RStudio",
+    "section": "R",
+    "text": "R\nR is a programming language that is widely used for statistical analysis and other data science applications. It is free and open source. Competing statistical software usually requires expensive subscriptions. Using R programming, you can not only run statistical analysis, but you can also create plots, maps, and even produce PDF and HTML reports."
+  },
+  {
+    "objectID": "wk1-intro.html#types-of-data-in-r",
+    "href": "wk1-intro.html#types-of-data-in-r",
+    "title": "Week 1 - Introduction to R programming and RStudio",
+    "section": "Types of data in R",
+    "text": "Types of data in R\nSome common types of data"
+  },
+  {
+    "objectID": "wk1-intro.html#section",
+    "href": "wk1-intro.html#section",
+    "title": "Week 1 - Introduction to R programming and RStudio",
+    "section": "",
+    "text": "Read 👏 your 👏 error 👏 and 👏 Google 👏 it! 👏"
+  },
+  {
+    "objectID": "wk1-intro.html#section-11",
+    "href": "wk1-intro.html#section-11",
+    "title": "What is R?",
+    "section": "",
+    "text": "Read 👏 your 👏 error 👏 and 👏 Google 👏 it! 👏"
+  },
+  {
+    "objectID": "wk1-intro.html#writing-code-7",
+    "href": "wk1-intro.html#writing-code-7",
+    "title": "What is R?",
+    "section": "Writing code",
+    "text": "Writing code\n\nWhat’s my variable?\nYou can see what variables you have assigned in the ‘Environment’ tab in R Studio."
+  },
+  {
+    "objectID": "wk1-intro.html#writing-code-8",
+    "href": "wk1-intro.html#writing-code-8",
+    "title": "What is R?",
+    "section": "Writing code",
+    "text": "Writing code\n\nWhat’s my variable?\nYou can see what variables you have assigned in the ‘Environment’ tab in R Studio."
+  },
+  {
+    "objectID": "wk1-intro.html#base-r-and-packages-1",
+    "href": "wk1-intro.html#base-r-and-packages-1",
+    "title": "What is R?",
+    "section": "Base R and packages",
+    "text": "Base R and packages\n\nR comes with various functions, packages, and datasets “baked in”\nc(), str(), sqrt(), log(), etc.\nBuilt-in datasets\nYou can get help within R Studio by typing a question mark before a function, package, or dataset (i.e. ?str())"
+  },
+  {
+    "objectID": "wk1-intro.html#base-r-and-packages-2",
+    "href": "wk1-intro.html#base-r-and-packages-2",
+    "title": "What is R?",
+    "section": "Base R and packages",
+    "text": "Base R and packages\n\nPackages\n\npackages are created by R users to expand functionality of R\nstatistical packages, graphical packages, unique datasets, etc."
+  },
+  {
+    "objectID": "wk1-intro.html#base-r-and-packages-3",
+    "href": "wk1-intro.html#base-r-and-packages-3",
+    "title": "What is R?",
+    "section": "Base R and packages",
+    "text": "Base R and packages\nWe will use many datasets from the datasets package built into R.\nOne such dataset is called mtcars."
+  },
+  {
+    "objectID": "wk1-intro.html#base-r-and-packages-4",
+    "href": "wk1-intro.html#base-r-and-packages-4",
+    "title": "What is R?",
+    "section": "Base R and packages",
+    "text": "Base R and packages\nFor all the Swifties out there, install the package taylor for a dataset of various data for all of Taylor Swift’s songs\n\n# install.packages(\"taylor\") # only needs to be run once\nlibrary(taylor) # packages need to be loaded with library()\n\nWarning: package 'taylor' was built under R version 4.3.1\n\n                 # every time you start a new R session\n                 # think: installing a bulb vs turning a light on\n\ntaylor_all_songs # return data frame of information about Taylor Swift's songs\n\n# A tibble: 325 × 29\n   album_name   ep    album_release track_number track_name     artist featuring\n   &lt;chr&gt;        &lt;lgl&gt; &lt;date&gt;               &lt;int&gt; &lt;chr&gt;          &lt;chr&gt;  &lt;chr&gt;    \n 1 Taylor Swift FALSE 2006-10-24               1 Tim McGraw     Taylo… &lt;NA&gt;     \n 2 Taylor Swift FALSE 2006-10-24               2 Picture To Bu… Taylo… &lt;NA&gt;     \n 3 Taylor Swift FALSE 2006-10-24               3 Teardrops On … Taylo… &lt;NA&gt;     \n 4 Taylor Swift FALSE 2006-10-24               4 A Place In Th… Taylo… &lt;NA&gt;     \n 5 Taylor Swift FALSE 2006-10-24               5 Cold As You    Taylo… &lt;NA&gt;     \n 6 Taylor Swift FALSE 2006-10-24               6 The Outside    Taylo… &lt;NA&gt;     \n 7 Taylor Swift FALSE 2006-10-24               7 Tied Together… Taylo… &lt;NA&gt;     \n 8 Taylor Swift FALSE 2006-10-24               8 Stay Beautiful Taylo… &lt;NA&gt;     \n 9 Taylor Swift FALSE 2006-10-24               9 Should've Sai… Taylo… &lt;NA&gt;     \n10 Taylor Swift FALSE 2006-10-24              10 Mary's Song (… Taylo… &lt;NA&gt;     \n# ℹ 315 more rows\n# ℹ 22 more variables: bonus_track &lt;lgl&gt;, promotional_release &lt;date&gt;,\n#   single_release &lt;date&gt;, track_release &lt;date&gt;, danceability &lt;dbl&gt;,\n#   energy &lt;dbl&gt;, key &lt;int&gt;, loudness &lt;dbl&gt;, mode &lt;int&gt;, speechiness &lt;dbl&gt;,\n#   acousticness &lt;dbl&gt;, instrumentalness &lt;dbl&gt;, liveness &lt;dbl&gt;, valence &lt;dbl&gt;,\n#   tempo &lt;dbl&gt;, time_signature &lt;int&gt;, duration_ms &lt;int&gt;, explicit &lt;lgl&gt;,\n#   key_name &lt;chr&gt;, mode_name &lt;chr&gt;, key_mode &lt;chr&gt;, lyrics &lt;list&gt;"
+  },
+  {
+    "objectID": "wk1-intro.html#practice",
+    "href": "wk1-intro.html#practice",
+    "title": "What is R?",
+    "section": "Practice",
+    "text": "Practice\n\nCreate a vector containing the months of the year.\nCreate a vector of your favourite 5 numbers.\nWhat is the structure of mtcars?\nWhat is pi according to R?\nWhat is Nile and what is its structure?"
+  },
+  {
+    "objectID": "wk1-intro.html#section-10",
+    "href": "wk1-intro.html#section-10",
+    "title": "What is R?",
+    "section": "",
+    "text": "Read 👏 your 👏 error 👏 and 👏 Google 👏 it! 👏"
+  },
+  {
+    "objectID": "wk1-intro.html#section-8",
+    "href": "wk1-intro.html#section-8",
+    "title": "What is R?",
+    "section": "",
+    "text": "Read 👏 your 👏 error 👏 and 👏 Google 👏 it! 👏"
+  },
+  {
+    "objectID": "wk1-intro.html#r-programming-language",
+    "href": "wk1-intro.html#r-programming-language",
+    "title": "What is R?",
+    "section": "R programming language",
+    "text": "R programming language\n\n\n“language and environment for statistical computing and graphics” - https://www.r-project.org/about.html\n\n\n\n\nfree and open source\n\n\n\n\nimport data, data exploration, statistical analysis, graphical representation, report creation\n\n\n\n\n\nLearning R has its ups and downs\n\n\n\n\n\nSuccess in R is enabled by support from lots of people\n\n\n\n\n\nSome people really really like R"
+  },
+  {
+    "objectID": "wk1-intro.html#downloading-r",
+    "href": "wk1-intro.html#downloading-r",
+    "title": "What is R?",
+    "section": "Downloading R",
+    "text": "Downloading R\nNavigate to https://cran.r-project.org/"
+  },
+  {
+    "objectID": "wk1-intro.html#downloading-r-studio",
+    "href": "wk1-intro.html#downloading-r-studio",
+    "title": "What is R?",
+    "section": "Downloading R Studio",
+    "text": "Downloading R Studio\nNavigate to https://posit.co/download/rstudio-desktop/"
+  },
+  {
+    "objectID": "wk1-intro.html#section-6",
+    "href": "wk1-intro.html#section-6",
+    "title": "What is R?",
+    "section": "",
+    "text": "Read 👏 your 👏 error 👏 and 👏 Google 👏 it! 👏"
+  },
+  {
+    "objectID": "wk1-intro.html#section-5",
+    "href": "wk1-intro.html#section-5",
+    "title": "What is R?",
+    "section": "",
+    "text": "Read 👏 your 👏 error 👏 and 👏 Google 👏 it! 👏"
   }
 ]

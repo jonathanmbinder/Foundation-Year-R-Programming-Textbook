@@ -1,0 +1,22 @@
+# Week 2 - Averages, standard deviation, and standard error
+
+## Mean
+
+As you know, the mean (or average) is the sum of a group of numbers divided by the number of individual numbers.
+
+There are a few base R functions that we can use to calculate the mean.
+
+To calculate a mean, first we add up all the values that we are interested in using the `sum()` function.
+
+Here, we will use the `rivers` dataset which is included in your installation of R. `rivers` is a predefined dataset and you can find out more about it by typing `?rivers` in the console. `rivers` is a *vector* which is a list of items that all have the same type (i.e. list of numbers, list of strings, etc.)
+
+First, we add up all the elements of the vector `rivers` by using the function `sum()`
+
+```{r}
+#| eval: false
+sum(rivers)
+```
+
+We can assign this value to a variable by using 
+
+

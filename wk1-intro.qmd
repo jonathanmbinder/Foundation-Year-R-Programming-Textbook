@@ -1,0 +1,290 @@
+---
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# What is R?
+
+## R programming language
+
+::: {.fragment .fade-up}
+-   "language and environment for statistical computing and graphics" -
+    https://www.r-project.org/about.html
+:::
+
+::: {.fragment .fade-up}
+-   free and open source
+:::
+
+::: {.fragment .fade-up}
+-   import data, data exploration, statistical analysis, graphical
+    representation, report creation
+:::
+
+![Learning R has its ups and
+downs](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/d65eb83f-66e4-4760-8c1f-29d336d1d6df.png?h=9b917065e8502455cd1c4791492b2199)
+
+![Success in R is enabled by support from lots of
+people](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/e4a11b1f-f235-461f-ab73-ce6128c59e49.png?h=dc95847637c97b0d5f5c993e906f2ccd)
+
+![Some people really really like
+R](https://pbs.twimg.com/media/D1K_J-3XcAAT6fW)
+
+## R
+
+![R is a programming
+language](https://www.simonqueenborough.info/R/basic/figure/r-window.png)
+
+## RStudio
+
+![RStudio improves the functionality of R](images/Picture%201.png)
+
+## Downloading R
+
+Navigate to <https://cran.r-project.org/>
+
+## Downloading R Studio
+
+Navigate to <https://posit.co/download/rstudio-desktop/>
+
+## Writing code
+
+### Maths
+
+You can do simple math in the console.
+
+::: {.fragment .fade-up}
+```{r}
+#| echo: true
+1 + 1
+```
+:::
+
+![](images/Picture 3.png)
+
+You can use *pi* as well as other more complex arithmetic.
+
+::: {.fragment .fade-up}
+```{r}
+#| echo: true
+4*pi
+```
+:::
+
+::: {.fragment .fade-up}
+```{r}
+#| echo: true
+10^2
+```
+:::
+
+### Assigning variables
+
+By convention, variables are assigned using `<-`
+
+```{r}
+#| echo: true
+x <- 5
+```
+
+::: {.fragment .fade-up}
+```{r}
+#| echo: true
+x
+```
+:::
+
+::: {.fragment .fade-up}
+```{r}
+#| echo: true
+x*2
+```
+:::
+
+::: callout-tip
+## Navigating history of the console
+
+You can press arrow keys
+<kbd class="keyboard-key nowrap" style="border: 0.1em solid #AAA; border-radius:0.2em; box-shadow: 0.1em 0.2em 0.2em #DDD; background-color: #F9F9F9; background-image: linear-gradient(to bottom, #EEE, #F9F9F9, #EEE); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.85em;">↑</a></kbd>
+and
+<kbd class="keyboard-key nowrap" style="border: 0.1em solid #AAA; border-radius:0.2em; box-shadow: 0.1em 0.2em 0.2em #DDD; background-color: #F9F9F9; background-image: linear-gradient(to bottom, #EEE, #F9F9F9, #EEE); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.85em;">↓</a></kbd>
+to go backward and forward through the history of code that was
+executed. This is useful for quickly going back to fix an error in code.
+:::
+
+![We use `<-` instead of `=` by convention although both have the same function.](https://scontent.flhr1-2.fna.fbcdn.net/v/t1.6435-9/82084725_2922179447834327_6926673893482561536_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=7f8c78&_nc_ohc=TqkR9KsNX1wAX8TcP_o&_nc_ht=scontent.flhr1-2.fna&oh=00_AfA6mWB6l_5ksu1lxUdKRmXxh7ef3Bb0Q55l-2emrTWJzQ&oe=659C33C0)
+
+### Types of variables
+
+![source:
+https://sydney-informatics-hub.github.io/lessonbmc/02-BMC_R_Day1_B/index.html](https://sydney-informatics-hub.github.io/lessonbmc/fig/Rvariablesdata.jpg)
+
+### Creating a script
+
+A script is a file containing text, written in the R programming
+language, which can be executed in R.\
+**File** -\> **New File** -\> **R Script**
+
+::: {.fragment .fade-up}
+-   Stay organised (logical flow)
+:::
+
+::: {.fragment .fade-up}
+-   Repeat the same analysis with new data
+:::
+
+::: {.fragment .fade-up}
+-   Share code with others
+:::
+
+::: {.fragment .fade-up}
+::: callout-tip
+## Executing your script
+
+Click on a line in your script and press
+<kbd class="keyboard-key nowrap" style="border: 0.1em solid #AAA; border-radius:0.2em; box-shadow: 0.1em 0.2em 0.2em #DDD; background-color: #F9F9F9; background-image: linear-gradient(to bottom, #EEE, #F9F9F9, #EEE); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.85em;">Ctrl</a></kbd> +
+<kbd class="keyboard-key nowrap" style="border: 0.1em solid #AAA; border-radius:0.2em; box-shadow: 0.1em 0.2em 0.2em #DDD; background-color: #F9F9F9; background-image: linear-gradient(to bottom, #EEE, #F9F9F9, #EEE); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.85em;">↵
+Return</a></kbd> to execute your script line-by-line.
+:::
+:::
+
+![](images/Picture 4.png)
+
+![](images/Picture 5.png)
+
+### Creating vectors
+
+A vector is simply a list of items that are all the same type.\
+The function `c()` *combines* values to a vector (list).\
+Functions follow the pattern `function_name(argument/s)`.
+
+```{r}
+#| echo: true
+x <- c(1,4,5.8) # I am assigning my favourite numbers to the variable "x"
+```
+
+::: {.fragment .fade-up}
+```{r}
+#| echo: true
+x*2             # Multiply each number by 2
+```
+:::
+
+::: callout-tip
+## Commenting on code
+
+Everything to the right of the hashtag (**\#**) is considered a
+"comment" and is not interpreted as R code.
+:::
+
+![It's good practice to leave comments in your code.](https://i.redd.it/b9e4xbeg40151.jpg)
+
+### Encountering errors
+
+```{r}
+#| error: true
+#| echo: true
+x <- c("Windsor", "Davison", "Founder's", "Bourne", "The Hub")
+x
+```
+
+::: {.fragment .fade-up}
+```{r}
+#| error: true
+#| echo: true
+x*2
+```
+:::
+
+![](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/31e5b53b-32b2-4a1f-b966-31fb14d1867e.png?h=b1333af4597ae97cb8cb964f9ea13812)
+
+![](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/51084276-ab7f-4c57-a0e7-5cf14a277359.png?h=69e1a6fbff194b606222a0795f89b6c8)
+
+![](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/d4f90788-7a14-4d44-94ab-da13dd41f009.png?h=585957612c146dc43c4aa63e9431ad1b)
+
+### Troubleshooting
+
+::: r-fit-text
+Read 👏 your 👏 error 👏 and 👏 Google 👏 it! 👏
+:::
+
+### What's my variable?
+
+We can find out the *structure* of a variable or dataframe is is by
+using the function `str()`.
+
+```{r}
+#| echo: true
+x <- c(1,4,5.8) # I am assigning my favorite numbers to the variable "x"
+str(x)
+```
+
+::: {.fragment .fade-up}
+```{r}
+#| echo: true
+y <- "fish"
+str(y)
+```
+:::
+
+You can see what variables you have assigned in the 'Environment' tab in
+R Studio.
+
+![](images/Picture 10.png)
+
+## Base R and packages
+
+-   R comes with various functions, packages, and datasets "baked in"
+
+-   `c()`, `str()`, `sqrt()`, `log()`, etc.
+
+-   Built-in datasets
+
+-   You can get help within R Studio by typing a question mark before a
+    function, package, or dataset (i.e. `?str()`)
+
+![](images/Picture 6.png)
+
+### Packages
+
+-   packages are created by R users to expand functionality of R
+
+-   statistical packages, graphical packages, unique datasets, etc.
+
+We will use many datasets from the `datasets` package built into R.
+
+One such dataset is called `mtcars`.
+
+##  {background-image="images/Picture 9.png" background-size="contain"}
+
+##  {background-image="images/Picture 13.png" background-size="contain"}
+
+##  {background-image="images/Picture 12.png" background-size="contain"}
+
+##  {background-image="images/Picture 11.png" background-size="contain"}
+
+# Installing packages
+
+## Base R and packages
+
+For all the Swifties out there, install the package `taylor` for a
+dataset of various data for all of Taylor Swift's songs
+
+```{r}
+#| echo: true
+# install.packages("taylor") # only needs to be run once
+library(taylor) # packages need to be loaded with library()
+                 # every time you start a new R session
+                 # think: installing a bulb vs turning a light on
+
+taylor_all_songs # return data frame of information about Taylor Swift's songs
+```
+
+## Practice
+
+1.  Create a vector containing the months of the year.
+2.  Create a vector of your favourite 5 numbers.
+3.  What is the structure of `mtcars`?
+4.  What is `pi` according to R?
+5.  What is `Nile` and what is its structure?
